@@ -1,0 +1,12 @@
+<%- include('header') -%>
+    <h1>Listado de canciones</h1>
+    <ul>
+        <% for(let i = 0; i < canciones.length; i++) { %>
+            <li>
+                <a href="/canciones/<%=canciones[i].id%>">
+                   <%=canciones[i].titulo%>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+<%- include('footer') -%>

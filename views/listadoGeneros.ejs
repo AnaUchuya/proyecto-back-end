@@ -1,0 +1,19 @@
+<%- include('header') -%>
+    <h1>Listado de generos</h1>
+    <ul>
+        <% for(let i = 0; i < generos.length; i++) { %>
+                    <h4>
+                        <%=generos[i].name%>
+                    </h4>
+                    
+                        <% for(let i = 0; i < canciones.length; i++) { %>
+                            <% if(canciones[i].genero_id == generos[0].id){ %>
+                               <li><%=canciones[i].titulo%></li>
+                            <% } else {%>
+                                <p>No hay canciones</p>
+                                <% } %> 
+                        <% } %> 
+                    
+                <% } %> 
+    </ul>
+<%- include('footer') -%>
